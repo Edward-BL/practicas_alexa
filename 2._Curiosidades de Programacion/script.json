@@ -1,0 +1,97 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "abre curiosidades de programacion",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "como uso la skill",
+                        "como usar",
+                        "que realiza esta skill",
+                        "ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "bye",
+                        "adios",
+                        "cerrar",
+                        "cierra curiosidades de programacion",
+                        "cierra la skill"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hola",
+                        "como estás",
+                        "di hola mundo",
+                        "di hola",
+                        "hola mundo"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CustomLanguageIntentHandler",
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "dame un dato curioso de {language}",
+                        "que es {language}",
+                        "que sabes de {language}",
+                        "dime algo sobre {language}",
+                        "prueba {language}",
+                        "dime una curiosidad sobre {language}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CustomLanguageIntentHandler",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.169529918803.487469946965"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.169529918803.487469946965",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No tengo referencias a ese lenguaje, puedes probar con otro, trata de deciendo que sabes de JavaScript"
+                    }
+                ]
+            }
+        ]
+    }
+}
