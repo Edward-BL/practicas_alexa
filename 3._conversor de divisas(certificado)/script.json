@@ -1,0 +1,285 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "conversor de divisas",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CustomConvertPesoE",
+                    "slots": [
+                        {
+                            "name": "pesos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{pesos} pesos a euros ",
+                        "convertir {pesos} pesos a euros ",
+                        "quiero convertir {pesos} pesos a euros "
+                    ]
+                },
+                {
+                    "name": "CustomConvertDolarPeso",
+                    "slots": [
+                        {
+                            "name": "dolarP",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{dolarP} dolares a pesos ",
+                        "convertir {dolarP} dolares a pesos ",
+                        "quiero convertir {dolarP} dolares a pesos "
+                    ]
+                },
+                {
+                    "name": "CustomConvertEuroD",
+                    "slots": [
+                        {
+                            "name": "eurosD",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{eurosD} euros a dolar ",
+                        "convertir {eurosD} euros a dolar ",
+                        "quiero convertir {eurosD} euros a dolar "
+                    ]
+                },
+                {
+                    "name": "CustomConvertDolarE",
+                    "slots": [
+                        {
+                            "name": "dolarEu",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{dolarEu} dolares a euros ",
+                        "convertir {dolarEu} dolares a euros ",
+                        "quiero convertir {dolarEu} dolares a euros "
+                    ]
+                },
+                {
+                    "name": "CustomIntentPesosaDolar",
+                    "slots": [
+                        {
+                            "name": "pesodolar",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{pesodolar} pesos a dolares",
+                        "convertir {pesodolar} pesos a dolares",
+                        "quiero convertir {pesodolar} pesos a dolares "
+                    ]
+                },
+                {
+                    "name": "CustomConvEurosaPesos",
+                    "slots": [
+                        {
+                            "name": "eurosapesos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{eurosapesos} euros a pesos",
+                        "convertir {eurosapesos} euros a pesos",
+                        "quiero convertir {eurosapesos} euros a pesos"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CustomConvertPesoE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pesos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.211926205482.342056774819"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomConvertDolarPeso",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dolarP",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1183034377602.111555701179"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomConvertEuroD",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "eurosD",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1471573515500.1275215849941"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomConvertDolarE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dolarEu",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.450461803084.572271867722"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomIntentPesosaDolar",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pesodolar",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.213618525608.1140229190938"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomConvEurosaPesos",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "eurosapesos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.954025076865.1442840312193"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.211926205482.342056774819",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa opcion, intenta con pesos a euros"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.782591423311.988457625779",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa opcion, prueba con peso a dolar"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1183034377602.111555701179",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa opcion, intente con convertir dolares a pesos"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.373312440594.589700334965",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esta opcion, intenta con convertir euros a pesos "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1471573515500.1275215849941",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa opcion, intenta con convertir euro a dolar"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.450461803084.572271867722",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa opcion, intenta con convertir dolares a euros"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.213618525608.1140229190938",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no se encontro esta conversion, porfavor intenta con, convertir pesos a dolares"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.954025076865.1442840312193",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "no encontre esa funcion, intenta con convertir euros a pesos"
+                    }
+                ]
+            }
+        ]
+    }
+}
